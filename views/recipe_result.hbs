@@ -1,3 +1,24 @@
 <h1>Recipe Results</h1>
 
 {{!-- TODO create HTML and display the recipe information --}}
+<!-- show the recipe name -->
+<h2>{{recipeJSON.name}}</h2>
+
+<!-- short info about the recipe -->
+<p>{{recipeJSON.description}}</p>
+
+<!-- ingredients needed -->
+<h3>Ingredients</h3>
+<ul>
+    {{#each recipeJSON.ingredients}}
+        <li>{{this}}</li>
+    {{/each}}
+</ul>
+
+<!-- steps to make the food -->
+<h3>Instructions</h3>
+<ol>
+    {{#each recipeJSON.instructions}}
+        <li>{{this}}</li>
+    {{/each}}
+</ol>
